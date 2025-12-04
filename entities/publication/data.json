@@ -1,1 +1,67 @@
-
+{
+  "name": "Publication",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Title of the publication"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "blog",
+        "equity_report",
+        "research_paper",
+        "project_report"
+      ],
+      "description": "Type of publication"
+    },
+    "category": {
+      "type": "string",
+      "description": "Category or sector (e.g., BFSI, Quants, Market Analysis)"
+    },
+    "description": {
+      "type": "string",
+      "description": "Brief description of the publication"
+    },
+    "content": {
+      "type": "string",
+      "description": "Full content for blogs"
+    },
+    "file_url": {
+      "type": "string",
+      "description": "URL to downloadable file (for reports)"
+    },
+    "thumbnail_url": {
+      "type": "string",
+      "description": "Thumbnail image URL"
+    },
+    "author": {
+      "type": "string",
+      "description": "Author name"
+    },
+    "division": {
+      "type": "string",
+      "enum": [
+        "fundamentals",
+        "technicals",
+        "quants"
+      ],
+      "description": "Which division created this"
+    },
+    "published_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Publication date"
+    },
+    "is_featured": {
+      "type": "boolean",
+      "default": false,
+      "description": "Featured on homepage"
+    }
+  },
+  "required": [
+    "title",
+    "type"
+  ]
+}
